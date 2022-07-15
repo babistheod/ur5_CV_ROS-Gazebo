@@ -309,9 +309,7 @@ class ur5_mp:
                     rospy.loginfo("Path computed successfully. Moving the arm.")
                     num_pts = len(plan.joint_trajectory.points)
                     rospy.loginfo("\n# intermediate waypoints = "+str(num_pts))
-                    rospy.loginfo("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!prin to exec!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                     self.arm.execute(plan)
-                    rospy.loginfo("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!complete move!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                     rospy.loginfo("Path execution complete.")
                 else:
                     rospy.loginfo("Path planning failed")
@@ -369,9 +367,7 @@ class ur5_mp:
                 rospy.loginfo("Path computed successfully. Moving the arm.")
                 num_pts = len(plan.joint_trajectory.points)
                 rospy.loginfo("\n# intermediate waypoints = "+str(num_pts))
-                rospy.loginfo("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!prin to exec 2222222222!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                 self.arm.execute(plan)
-                rospy.loginfo("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!complete move 2222222222!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                 rospy.loginfo("Path execution complete.")
             else:
                 rospy.loginfo("Path planning failed")
